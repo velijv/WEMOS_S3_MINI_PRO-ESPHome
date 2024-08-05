@@ -1,0 +1,266 @@
+# These substitutions allow the end user to override certain values
+substitutions:
+  friendly_name: 'S3 Mini Pro'
+  node_name: 's3minipro'
+  device_name: 's3minipro'
+  project_base: 'Lolin Wemos'
+  project_name: 'S3 Mini Pro'
+  project_version: '1.0'
+  device_description: 'I2C(SH1.0-4P); 0.85"TFT(128x128); QMI8658C(6D MEMS IMU)'
+# pins
+  pin_button_1: '0'
+  pin_button_2: '47'
+  pin_button_3: '48'
+  pin_ir: '9'
+  pin_rgb_led: '8'
+  pin_rgb_power: '7'
+  pin_i2c_sda: '12'
+  pin_i2c_scl: '11'
+  imu_int_1: '18'
+  imu_int_2: '21'
+  pin_tx: '43'
+  pin_rx: '44'
+  pin_ss: '37'
+  pin_tft_bl: '33'
+  pin_tft_rst: '34'
+  pin_tft_cs: '35'
+  pin_tft_dc: '36'
+  pin_tft_mosi: '38'
+  pin_tft_miso: '39'
+  pin_tft_sck: '40'
+
+esphome:
+  name: $node_name
+  friendly_name: $friendly_name
+  comment: $device_description
+  # This will allow for project identification,
+  # configuration and updates.
+  project:
+    name: ${project_base}.${project_name}
+    version: $project_version
+  platformio_options:
+    board: lolin_s3_mini
+    framework: espidf
+    board_build.mcu: esp32s3
+    board_build.f_cpu: 240000000L
+    board_build.f_flash: 80000000L
+    board_build.flash_mode: qio
+    board_build.arduino.memory_type: qio_opi
+    build_flags: [
+      "-DBOARD_HAS_PSRAM",
+      "-DARDUINO_LOLIN_S3_MINI_PRO",
+      ]
+    board_build.extra_flags:
+      - "-DURL=\\\"https://www.wemos.cc/en/latest/s3/s3_mini_pro.html\\\""
+      - "-DVENDOR=\\\"Wemos\\\""
+      - "-DUSB_MANUFACTURER_STRING=\\\"Lolin\\\""
+      - "-DUSB_PRODUCT_STRING=\\\"S3MiniPro\\\""
+      - "-w"
+  # Automatically add the mac address to the name
+  # so you can use a single firmware for all devices
+  name_add_mac_suffix: true
+
+esp32:
+  board: lolin_s3_mini
+  variant: esp32s3
+  flash_size: 4MB
+  framework:
+    type: esp-idf
+    version: latest
+    platform_version: 6.6.0
+    sdkconfig_options:
+      CONFIG_ESPTOOLPY_FLASHFREQ_80M: y
+      CONFIG_FLASHMODE_QIO: y
+      CONFIG_ESPTOOLPY_FLASHSIZE_DETECT: y
+      CONFIG_ESPTOOLPY_AFTER_NORESET: y
+      CONFIG_TEMP_SENSOR_SUPPRESS_DEPRECATE_WARN: y
+      CONFIG_LWIP_MAX_SOCKETS: '16'
+      CONFIG_LWIP_CHECK_THREAD_SAFETY: y
+      CONFIG_LWIP_IRAM_OPTIMIZATION: y
+      CONFIG_LWIP_EXTRA_IRAM_OPTIMIZATION: y
+      CONFIG_BT_BLE_50_FEATURES_SUPPORTED: y
+      CONFIG_ESP_TASK_WDT: y
+      CONFIG_ESP_TASK_WDT_TIMEOUT_S: '10'
+      CONFIG_RMT_ISR_IRAM_SAFE: y
+      CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
+      CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240: y
+      CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ: '240'
+      CONFIG_ESP32_DEFAULT_CPU_FREQ_240: y
+      CONFIG_ESP32S3_DEFAULT_CPU_FREQ_240: y
+      CONFIG_COMPILER_OPTIMIZATION: CONFIG_COMPILER_OPTIMIZATION_PERF
+      CONFIG_BOOTLOADER_COMPILER_OPTIMIZATION: BOOTLOADER_COMPILER_OPTIMIZATION_PERF
+      CONFIG_COMPILER_OPTIMIZATION_CHECKS_SILENT: y
+      CONFIG_COMPILER_OPTIMIZATION_ASSERTIONS_SILENT: y
+      CONFIG_BT_ALLOCATION_FROM_SPIRAM_FIRST: 'y'
+      CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP: y
+      CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG: y
+      CONFIG_ESP32S3_BROWNOUT_DET: y
+      CONFIG_ESP32S3_BROWNOUT_DET_LVL_SEL_7: y
+      CONFIG_ESP32S3_BROWNOUT_DET_LVL: '7'
+
+# Enable PSRAM
+psram:
+
+# To be able to get logs from the device via serial and api.
+logger:
+  hardware_uart: USB_SERIAL_JTAG
+
+# API is a requirement of the dashboard import.
+api:
+
+# OTA is required for Over-the-Air updating
+ota:
+  - platform: esphome
+
+# This should point to the public location of this yaml file.
+dashboard_import:
+  package_import_url: github://velijv/WEMOS_S3_MINI_PRO-ESPHome/s3-mini-pro.yaml@main
+
+wifi:
+  # Set up a wifi access point using the device name above
+  ap:
+
+# In combination with the `ap` this allows the user
+# to provision wifi credentials to the device.
+captive_portal:
+
+##########################################################
+# Most projects should not remove anything from above here
+# and should just modify the name, project name/version
+# and git url for the dashboard_import
+##########################################################
+
+# Sets up Bluetooth LE (Only on ESP32) to allow the user
+# to provision wifi credentials to the device.
+esp32_improv:
+  authorizer: none
+
+# Sets up the improv via serial client for Wi-Fi provisioning.
+# Handy if your device has a usb port for the user to add credentials when they first get it.
+improv_serial:
+  next_url: https://veli.ee/esphome?device_name={{device_name}}&ip_address={{ip_address}}&esphome_version={{esphome_version}}
+
+##########################################################
+# S3_MINI_PRO CONFIG BEGIN
+##########################################################
+binary_sensor:
+- platform: gpio
+  pin:
+    number: $pin_button_1
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+    ignore_strapping_warning: true
+  name: Button Left
+  id: io_${pin_button_1}
+
+- platform: gpio
+  pin:
+    number: $pin_button_2
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  name: Button OK
+  id: io_${pin_button_2}
+
+- platform: gpio
+  pin:
+    number: $pin_button_3
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  name: Button Right
+  id: io_${pin_button_3}
+
+i2c:
+  id: i2c_bus
+  sda: $pin_i2c_sda
+  scl: $pin_i2c_scl
+  scan: true
+
+spi:
+  clk_pin: $pin_tft_sck
+  mosi_pin: $pin_tft_mosi
+  interface: any
+
+remote_receiver:
+- id: ${device_name}_receiver
+  dump: all
+  pin:
+    number: $pin_ir
+    mode:
+      input: true
+
+power_supply:
+- id: rgb_led_psu
+  pin:
+    number: $pin_rgb_power
+    mode:
+      output: true
+      pulldown: true
+  enable_time: 10ms
+  keep_on_time: 50ms
+  enable_on_boot: false
+
+output:
+  - id: backlight_pwm
+    platform: ledc
+    frequency: 1220Hz
+    pin:
+      number: $pin_tft_bl
+      mode:
+        output: true
+        pullup: true
+    min_power: 0.1
+    max_power: 0.99
+    zero_means_zero: true
+
+light:
+  - platform: monochromatic
+    output: backlight_pwm
+    name: Display
+    id: backlight
+    restore_mode: ALWAYS_ON
+    icon: mdi:cellphone-screenshot
+    entity_category: config
+    default_transition_length: 100ms
+    on_turn_on:
+      then:
+        - component.update: lcd
+    on_turn_off:
+      then:
+        - lambda: |-
+            id(${device_name}_leds).turn_on().set_brightness(0.2).set_rgb(1.0, 0.5, 0.0).perform();
+
+  - platform: esp32_rmt_led_strip
+    rmt_channel: 3
+    chipset: WS2812
+    rgb_order: RGB
+    pin: $pin_rgb_led
+    num_leds: 1
+    icon: mdi:developer-board
+    id: ${device_name}_leds
+    name: IO_${pin_rgb_led}_LED
+    entity_category: diagnostic
+    disabled_by_default: true
+    restore_mode: ALWAYS_OFF
+    default_transition_length: 200ms
+    power_supply: rgb_led_psu
+#    effects: !include
+#      file: common/light/effects/single.rgb.yaml
+
+
+####
+# packages:
+#   gyro: !include {
+#     file: common/sensor/qmi8658c.yaml,
+#     vars: {
+#       gyro_id: '${gyro_id}',
+#       gyro_name: '${gyro_name}',
+#       update_interval: '${gyro_update_interval}',
+#     }
+#   }
+####
