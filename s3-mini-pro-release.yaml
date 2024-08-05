@@ -186,6 +186,26 @@ spi:
   mosi_pin: $pin_tft_mosi
   interface: any
 
+display:
+    platform: ili9xxx
+    cs_pin: $pin_tft_cs
+    dc_pin: $pin_tft_dc
+    reset_pin: $pin_tft_rst
+    update_interval: $display_update_interval
+    auto_clear_enabled: true
+    model: GC9A01A
+    dimensions:
+      height: $display_height
+      width: $display_width
+      offset_height: 1
+      offset_width: 2
+    data_rate: 20MHz
+    color_order: bgr
+    invert_colors: true
+    transform:
+      mirror_x: true
+      mirror_y: true
+
 remote_receiver:
 - id: ${device_name}_receiver
   dump: all
