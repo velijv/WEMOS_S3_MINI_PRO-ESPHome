@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="static/assets/css/main.css">
+<link rel="stylesheet" href="assets/css/main.css">
 
 # Wemos <img alt="Wemos" src="static/logos/wemos-icon.svg" height="28"> S3_MINI_PRO <img alt="ESPHome" src="static/logos/esphome-favicon.svg" height="28"> ESPHome
 
@@ -99,6 +99,8 @@ Espressif Systems ESP32-S3 (QFN56) (revision v0.2) dual-core Tensilica LX7 @ up 
 <details>
   <summary> 🎛 (QMI8658C) 6D MEMS IMU <code>yaml</code> 👇 </summary>
 
+***
+
 ```yaml
 external_components:
   - source: components
@@ -149,8 +151,9 @@ sensor:
     gforce_z:
       id: ${gyro_id}_gforce_z
       name: ${gyro_name} G-Force Z
-
 ```
+
+
 </details>
 
 
@@ -166,6 +169,8 @@ sensor:
 ### <code>display</code>
 <details open>
   <summary> 📺 (GC9107/GC9A01) 0.85” 128x128 LCD TFT display <code>yaml</code> 👇 </summary>
+
+***
 
 ```yaml
 display:
@@ -207,6 +212,8 @@ display:
 <details open>
   <summary> 🟣 (IR-0602) Infrared <code>yaml</code> 👇 </summary>
 
+***
+
 ```yaml
 remote_receiver:
   rmt_channel: 5
@@ -226,6 +233,8 @@ remote_receiver:
 ### <code>light</code> & <code>power_supply</code>
 <details open>
   <summary> 🌈 RGB LED with 🔌 Power Supply  <code>yaml</code> 👇 </summary>
+
+***
 
 ```yaml
 power_supply:
@@ -257,7 +266,7 @@ light:
 </details>
 
 
-<hr>
+***
 
 
 <table>
@@ -269,9 +278,11 @@ light:
 </table>
 
 
+***
+
+
 
 ## Disclaimer
-> [!NOTE]
 > <sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used are for identification purposes only. Use of these names, logos, and brands does not imply endorsement. </sub>
 >
 > > To release the full source, I would like to achieve a sponsorship goal.
@@ -303,9 +314,3 @@ light:
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 -->
-
-
-
-
-* TOC
-{:toc}
