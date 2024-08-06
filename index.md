@@ -78,10 +78,9 @@ Espressif Systems ESP32-S3 (QFN56) (revision v0.2) dual-core Tensilica LX7 @ up 
 	</thead>
 	<tbody>
 	<tr>
-		<td> <img src="static/icons/tech.svg" alt="S3_PRO_MINI" width=256> </td>
-		<td> <img src="static/icons/esphome.svg" alt="S3_PRO_MINI" width=256> </td>
-		<!--td> <img src="static/icons/branded.svg" alt="T-Watch S3" width=256 width=256> </td-->
-		<td> <img src="static/icons/veli.svg" alt="S3_PRO_MINI" width=256> </td>
+		<td> <img src="static/icons/tech.svg" alt="S3_PRO_MINI" height=256> </td>
+		<td> <img src="static/icons/esphome.svg" alt="S3_PRO_MINI" height=256> </td>
+		<td> <img src="static/icons/veli.svg" alt="S3_PRO_MINI" height=256> </td>
 	</tr>
 	</tbody>
 </table>
@@ -189,9 +188,9 @@ display:
       mirror_x: true
       mirror_y: true
 ```
+
 </details>
 
-- [x] `is` nice
 
 <table>
 	<tr>
@@ -202,6 +201,7 @@ display:
     <td><img alt="" src="static/screen_server/triangle.dib" width=128></td>
 	</tr>
 <table>
+
 
 ### <code>remote_receiver</code>
 <details open>
@@ -219,7 +219,9 @@ remote_receiver:
   tolerance: 20%
   buffer_size: 20kb
 ```
+
 </details>
+
 
 ### <code>light</code> & <code>power_supply</code>
 <details open>
@@ -251,10 +253,11 @@ light:
     default_transition_length: 200ms
     power_supply: rgb_led_psu
 ```
+
 </details>
 
 
-***
+<hr>
 
 
 <table>
@@ -262,7 +265,6 @@ light:
 		<td><img alt="Wemos" src="static/logos/wemos.svg" height="32">
 		<td><img alt="Espressif" src="static/logos/espressif.svg" height="32"></td>
 		<td><img alt="Esphome" src="static/logos/esphome.svg" height="32"></td>
-		<td><a href="https://veli.ee"><img src="https://veli.ee/northeast/logo?t=reverse+engineered&c=f5a012&b=e7352c&t2=%20📟" height="48" alt="Eesti"></a></td>
 	</tr>
 </table>
 

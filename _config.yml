@@ -16,7 +16,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/cover.png
+      image: static/assets/images/cover.png
 
 
 #  email: your-email@domain.com
