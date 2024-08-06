@@ -45,15 +45,17 @@ plugins:
 
 #lsi: false
 safe: true
-#source: [your repo's top level directory]
+source: https://github.com/velijv/WEMOS_S3_MINI_PRO-ESPHome
 incremental: false
 highlighter: rouge
 gist:
   noscript: false
 kramdown:
-#  math_engine: mathjax
+  math_engine: mathjax
   syntax_highlighter: rouge
   remove_block_html_tags: false
+  syntax_highlighter_opts:
+    disable : false
 
 social:
   name: Veli-Johan Veromann

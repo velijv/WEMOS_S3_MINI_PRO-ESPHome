@@ -278,7 +278,7 @@ light:
 
 <table>
 	<tr>
-		<td><img alt="Wemos" src="static/logos/wemos.svg" height="32">
+		<td><img alt="Wemos" src="static/logos/wemos.svg" height="32"></td>
 		<td><img alt="Espressif" src="static/logos/espressif.svg" height="32"></td>
 		<td><img alt="Esphome" src="static/logos/esphome.svg" height="32"></td>
 	</tr>
