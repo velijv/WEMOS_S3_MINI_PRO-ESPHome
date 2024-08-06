@@ -215,12 +215,13 @@ display:
 
 
 ### `remote_receiver`
+
 <details>
   <summary> 🟣 (IR-0602) Infrared <code>yaml</code> 👇 </summary>
 
-***
 
-```yaml
+<!--```yaml-->
+<pre>
 remote_receiver:
   rmt_channel: 5
   dump: all
@@ -231,7 +232,7 @@ remote_receiver:
       pullup: true
   tolerance: 20%
   buffer_size: 20kb
-```
+</pre>
 
 </details>
 
@@ -241,9 +242,7 @@ remote_receiver:
 <details>
   <summary> 🌈 RGB LED with 🔌 Power Supply  <code>yaml</code> 👇 </summary>
 
-***
-
-```yaml
+<pre>
 power_supply:
 - id: rgb_led_psu
   pin:
@@ -268,7 +267,7 @@ light:
     restore_mode: ALWAYS_OFF
     default_transition_length: 200ms
     power_supply: rgb_led_psu
-```
+</pre>
 
 </details>
 
@@ -292,7 +291,7 @@ light:
 ## Disclaimer
 
 
-> <sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used are for identification purposes only. Use of these names, logos, and brands does not imply endorsement. </sub>
+> > All product names, logos, and brands are property of their respective owners. All company, product and service names used are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
 >
 > > To release the full source, I would like to achieve a sponsorship goal.
 > >

@@ -113,6 +113,7 @@ img {
   --black: #1d2126;
   --transparent: rgba(128,128,128,0.2);
   --color: rgb(138,43,226);
+  --color: #18BCF2;
 }
 
 
@@ -143,7 +144,14 @@ table, iframe{
   width:100%;
   display: block;
   border:0;
+  border-collapse: collapse;
+  margin: 1rem;
 }
+
+table, tbody, tr{
+    width: 100%;
+}
+
 .markdown-body table td, .markdown-body table th, table td, table th{
   border:0;
 }
@@ -352,7 +360,7 @@ header > section {
     margin-bottom: 0;
 }
 header {
-    background-color: var(--black);
+    background-color: var(--color);
 }
 /*
 header,
