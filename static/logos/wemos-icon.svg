@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 114 114">
+  <defs>
+    <style>
+    path{color:#1d2126;fill:currentColor;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+    @media(prefers-color-scheme:dark) {path{color:#F2F4F9}}
+    </style>
+  </defs>
+  <path fill-rule="evenodd" d="M31 27c-4 3-8 20-9 29-1 16 3 27 12 31 5 3 15 2 20-1l4-3 2 2c5 4 14 5 20 3 4-2 9-8 11-13 4-12-2-36-11-45-7-7-14-2-7 6 9 10 13 28 8 39-4 8-13 7-18-2l-4-5c-3 0-5 1-6 5 0 4-6 7-10 7-13 0-16-23-6-46 2-4 2-5 1-7s-5-2-7 0Z" clip-rule="evenodd"/>
+</svg>
