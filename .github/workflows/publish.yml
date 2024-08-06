@@ -12,4 +12,4 @@ jobs:
       # CHANGEME: Set the filenames of your config files here:
       files: s3-mini-pro-release.yaml
       # CHANGEME: Set the name of your project here:
-      name: Wemos S3 Mini Pro
+      name: Wemos-S3-Mini-Pro
