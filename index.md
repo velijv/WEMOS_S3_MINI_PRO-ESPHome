@@ -1,14 +1,15 @@
 <link rel="stylesheet" href="assets/css/main.css">
 
-<center>
+
+
+# Wemos <img alt="Wemos" src="static/logos/wemos-icon.svg" height="28"> S3_MINI_PRO <img alt="ESPHome" src="static/logos/esphome-favicon.svg" height="28"> ESPHome
+
 
 [![Wemos](https://img.shields.io/badge/Wemos-f5a012.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMTQgMTE0Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgIHBhdGh7Y29sb3I6IzFkMjEyNjtmaWxsOmN1cnJlbnRDb2xvcjtzdHJva2U6Y3VycmVudENvbG9yO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZH0KICAgIEBtZWRpYShwcmVmZXJzLWNvbG9yLXNjaGVtZTpkYXJrKSB7cGF0aHtjb2xvcjojRjJGNEY5fX0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMxIDI3Yy00IDMtOCAyMC05IDI5LTEgMTYgMyAyNyAxMiAzMSA1IDMgMTUgMiAyMC0xbDQtMyAyIDJjNSA0IDE0IDUgMjAgMyA0LTIgOS04IDExLTEzIDQtMTItMi0zNi0xMS00NS03LTctMTQtMi03IDYgOSAxMCAxMyAyOCA4IDM5LTQgOC0xMyA3LTE4LTJsLTQtNWMtMyAwLTUgMS02IDUgMCA0LTYgNy0xMCA3LTEzIDAtMTYtMjMtNi00NiAyLTQgMi01IDEtN3MtNS0yLTcgMFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K&logoColor=fff&labelColor=rgba(0,0,0,0)&color=rgba(245,160,18,0.1)&style=flat-square
 )](https://github.com/search?q=wemos) [![Espressif](https://img.shields.io/badge/Espressif-e7352c.svg?logo=Espressif&logoColor=e7352c&labelColor=rgba(0,0,0,0)&color=rgba(231,53,44,0.1)&style=flat-square
 )](https://github.com/espressif/) [![ESPHome](https://img.shields.io/badge/ESPHome-000?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8ZGVmcz4KICAgIDxwYXRoIGlkPSJyZXVzZS0wIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik00MC41IDM4LjMyaDIuODd2Ny43NWgxNy4yNXYtNy43NWgyLjg3bC0yLjg5LTIuOXYtNS4wN2gtMS44djMuMjhsLTYuODEtNi44MXoiIGNsYXNzPSJmaWxsLWJsYWNrIi8+CiAgICA8c3R5bGU+CiAgICBwYXRoe2NvbG9yOiMxZDIxMjY7ZmlsbDpjdXJyZW50Q29sb3I7c3Ryb2tlOmN1cnJlbnRDb2xvcjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmR9CiAgICBAbWVkaWEocHJlZmVycy1jb2xvci1zY2hlbWU6ZGFyaykge3BhdGh7Y29sb3I6I0YyRjRGOX19CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KCiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj4KICAgIDxwYXRoIGQ9Ik0zNzMgMjM5IDI2NyAxMzRjLTYtNy0xNi03LTIyIDBMMTM5IDIzOWMtNiA2LTExIDE4LTExIDI3djk2YzAgOSA3IDE2IDE2IDE2aDYzVjIxOWMwLTQgMy02IDYtNmg4NmMzIDAgNiAyIDYgNnYyNmMwIDMtMyA2LTYgNmgtNTR2MTNoNTRjMyAwIDYgMyA2IDZ2MjZjMCAzLTMgNi02IDZoLTU0djEzaDU0YzMgMCA2IDMgNiA2djI2YzAgMy0zIDYtNiA2aC02MGE2IDYgMCAxIDEgMC0xMmg1M3YtMTNoLTUzYy00IDAtNi0zLTYtN3YtMjVjMC00IDItNyA2LTdoNTN2LTEyaC01M2MtNCAwLTYtMy02LTd2LTI1YzAtNCAyLTcgNi03aDUzdi0xM2gtNzJ2MTUzaDE0OGM5IDAgMTYtNyAxNi0xNnYtOTZjMC05LTUtMjEtMTEtMjdaIi8+CiAgPC9nPgogIDxkZWZzPgogICAgPGNsaXBQYXRoIGlkPSJhIj4KICAgICAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyOCAxMjloMjU2djI1NkgxMjh6Ii8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KPC9zdmc+Cg==&logoColor=808080&labelColor=rgba(0,0,0,0)&color=rgba(33,33,33,0.1)&style=flat-square)](https://github.com/esphome/esphome) [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-03A9F4?logo=HomeAssistant&logoColor=1abcf2&labelColor=rgba(0,0,0,0)&color=rgba(26,188,242,0.1)&style=flat-square)](https://my.home-assistant.io/redirect/config_flow_start/?domain=esphome)
 
-</center>
 
-# Wemos <img alt="Wemos" src="static/logos/wemos-icon.svg" height="28"> S3_MINI_PRO <img alt="ESPHome" src="static/logos/esphome-favicon.svg" height="28"> ESPHome
 
 ![PRO](static/images/cover.png "S3 Mini")
 
