@@ -1,4 +1,3 @@
-# CHANGEME: Set these variable to your liking
 # https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 
 title: S3 Mini Pro
@@ -16,7 +15,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: static/assets/images/cover.png
+      image: /assets/images/cover.png
 
 
 #  email: your-email@domain.com
@@ -37,25 +36,23 @@ plugins:
 - jekyll-github-metadata
 - jekyll-optional-front-matter
 #- jekyll-paginate
-#- jekyll-readme-index
+- jekyll-readme-index
 - jekyll-titles-from-headings
 - jekyll-relative-links
 #google_analytics: G-5H8W7JPJW7
+#markdown: kramdown
 
-markdown: kramdown
 #lsi: false
 safe: true
-#source: https://github.com/velijv/WEMOS_S3_MINI_PRO-ESPHome
-#incremental: false
+#source: [your repo's top level directory]
+incremental: false
 highlighter: rouge
-#gist:
-#  noscript: false
+gist:
+  noscript: false
 kramdown:
 #  math_engine: mathjax
   syntax_highlighter: rouge
-#  remove_block_html_tags: false
-#  syntax_highlighter_opts:
-#    disable : false
+  remove_block_html_tags: false
 
 social:
   name: Veli-Johan Veromann
