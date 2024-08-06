@@ -184,6 +184,7 @@ spi:
 
 display:
     platform: ili9xxx
+    id: lcd
     cs_pin: $pin_tft_cs
     dc_pin: $pin_tft_dc
     reset_pin: $pin_tft_rst
