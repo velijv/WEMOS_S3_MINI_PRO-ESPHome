@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="static/assets/css/main.css">
 
 # Wemos <img alt="Wemos" src="static/logos/wemos-icon.svg" height="28"> S3_MINI_PRO <img alt="ESPHome" src="static/logos/esphome-favicon.svg" height="28"> ESPHome
 
@@ -8,7 +8,7 @@
 
 <sup>Compatible with <code>arduino</code> and <code>esp-idf</code></sup>
 
-![PRO](images/img-transparent.png "S3 Mini")
+![PRO](static/images/img-transparent.png "S3 Mini")
 
 
 ## Installation
