@@ -104,9 +104,7 @@
 <details>
   <summary> 🎛 (QMI8658C) 6D MEMS IMU <code>yaml</code> 👇 </summary>
 
-***
-
-```yaml
+<pre>
 external_components:
   - source: components
     components: [ qmi ]
@@ -156,7 +154,7 @@ sensor:
     gforce_z:
       id: ${gyro_id}_gforce_z
       name: ${gyro_name} G-Force Z
-```
+</pre>
 
 
 </details>
@@ -176,9 +174,7 @@ sensor:
 <details>
   <summary> 📺 (GC9107/GC9A01) 0.85” 128x128 LCD TFT display <code>yaml</code> 👇 </summary>
 
-***
-
-```yaml
+<pre>
 display:
     platform: ili9xxx
     cs_pin: $pin_tft_cs
@@ -198,20 +194,22 @@ display:
     transform:
       mirror_x: true
       mirror_y: true
-```
+</pre>
 
 </details>
 
 
 <table>
+	<tbody>
 	<tr>
-		<td><img alt="" src="static/screen_server/grid.dib" width=128></td>
-		<td><img alt="" src="static/screen_server/watch.dib" width=128></td>
-		<td><img alt="" src="static/screen_server/dial.dib" width=128></td>
-    <td><img alt="" src="static/screen_server/clock.dib" width=128></td>
-    <td><img alt="" src="static/screen_server/triangle.dib" width=128></td>
+	<td><img alt="" src="static/screen_server/grid.dib"></td>
+	<td><img alt="" src="static/screen_server/watch.dib"></td>
+	<td><img alt="" src="static/screen_server/dial.dib"></td>
+    <td><img alt="" src="static/screen_server/clock.dib"></td>
+    <td><img alt="" src="static/screen_server/triangle.dib"></td>
 	</tr>
-<table>
+	</tbody>
+</table>
 
 
 ### `remote_receiver`
