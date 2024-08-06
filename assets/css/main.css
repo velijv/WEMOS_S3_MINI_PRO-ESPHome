@@ -114,6 +114,9 @@ img {
   --transparent: rgba(128,128,128,0.2);
   --color: rgb(138,43,226);
   --color: #18BCF2;
+  --font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: ui-monospace, SF Mono, Menlo, Consolas, Monaco, Inconsolata, Fira Mono, Droid Sans Mono, Liberation Mono, Lucida Console, monospace;
+
 }
 
 
@@ -158,7 +161,6 @@ table.grid, table.grid tbody{
 
 table.grid tr{
     display: grid !important;
-    width: 100vw !important;
     grid-template-columns: repeat(auto-fit, minmax(clamp(100% /(5 + 1) + 0.1%, 10em, 100%), 1fr));
     grid-template-rows: fit-content(50%);
 }
@@ -237,9 +239,7 @@ html {
 }
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
+    font-family: var(--font-family);
 }
 hr {
   display: block;
@@ -261,8 +261,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier,
-        monospace;
+    font-family: var(--font-family-monospace);
     font-size: 1em;
 }
 small {
@@ -344,6 +343,9 @@ pre {
 }
 summary {
     display: list-item;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 body,
 html {
