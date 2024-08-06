@@ -20,7 +20,7 @@
 
 <esp-web-install-button manifest="./manifest.json"></esp-web-install-button>
 
-<script type="module" src="static/https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"></script>
+<script type="module" src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"></script>
 
 </center>
 
@@ -30,7 +30,7 @@
 > [!NOTE]
 > Achieving a sponsorship goal will make me happy
 
-<iframe src="static/https://github.com/sponsors/velijv/card" title="Sponsor velijv" height="225" width="600"></iframe>
+<iframe src="https://github.com/sponsors/velijv/card" title="Sponsor velijv" height="225" width="600"></iframe>
 
 
 ## Specs
