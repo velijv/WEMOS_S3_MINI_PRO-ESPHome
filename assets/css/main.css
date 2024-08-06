@@ -637,15 +637,12 @@ h2, h3, .installer{
     margin: 0 !important;
     text-align: center;
     position: sticky;
-    top: 1rem;
-    padding: 2rem;
+    top: 0rem;
+    padding: 1rem;
     backdrop-filter: blur(1em);
 }
 
 .installer{
-    top: 4rem;
-}
-
-h3{
-    top: 2rem;
+    top: 3.5rem;
+    z-index: 4;
 }
