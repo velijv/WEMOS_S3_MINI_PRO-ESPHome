@@ -2,6 +2,8 @@
 
 # Wemos <img alt="Wemos" src="static/logos/wemos-icon.svg" height="28"> S3_MINI_PRO <img alt="ESPHome" src="static/logos/esphome-favicon.svg" height="28"> ESPHome
 
+![PRO](static/images/cover.png "S3 Mini")
+
 <a href="https://www.wemos.cc/en/latest/s3/s3_mini_pro.html">Wemos S3_MINI_PRO</a> full feature implementation for ESPHome
 
 ## <img alt="Wemos" src="static/logos/wemos.svg" height="28"> S3 Mini Pro S3 <img alt="ESPHome" src="static/logos/esphome.svg" height="28">
@@ -13,16 +15,15 @@
 
 ## Installation
 
-> [!TIP]
-> You can use the button below to install the pre-built firmware directly to your device via USB from the browser.
+<div class="installer">
 
-<center>
+> You can use the button below to install the pre-built firmware directly to your device via USB from the browser.
 
 <esp-web-install-button manifest="./manifest.json"></esp-web-install-button>
 
 <script type="module" src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js?module"></script>
 
-</center>
+</div>
 
 
 ## Support the author
@@ -92,10 +93,10 @@ Espressif Systems ESP32-S3 (QFN56) (revision v0.2) dual-core Tensilica LX7 @ up 
 
 ## Features
 
-> [!TIP]
-> Use all the devices capabilities that hardware provides.
+> 🦄 Use all the devices capabilities that ✨ hardware provides.
 
-### <code>sensor</code>
+### `sensor`
+
 <details>
   <summary> 🎛 (QMI8658C) 6D MEMS IMU <code>yaml</code> 👇 </summary>
 
@@ -166,7 +167,8 @@ sensor:
 </table>
 
 
-### <code>display</code>
+### `display`
+
 <details open>
   <summary> 📺 (GC9107/GC9A01) 0.85” 128x128 LCD TFT display <code>yaml</code> 👇 </summary>
 
@@ -208,7 +210,7 @@ display:
 <table>
 
 
-### <code>remote_receiver</code>
+### `remote_receiver`
 <details open>
   <summary> 🟣 (IR-0602) Infrared <code>yaml</code> 👇 </summary>
 
@@ -283,6 +285,8 @@ light:
 
 
 ## Disclaimer
+
+
 > <sub>All product names, logos, and brands are property of their respective owners. All company, product and service names used are for identification purposes only. Use of these names, logos, and brands does not imply endorsement. </sub>
 >
 > > To release the full source, I would like to achieve a sponsorship goal.

@@ -109,8 +109,8 @@ img {
 
 :root {
   color-scheme: light dark;
-  --white: #fff;
-  --black: #000;
+  --white: #f2f4f9;
+  --black: #1d2126;
   --transparent: rgba(128,128,128,0.2);
   --color: rgb(138,43,226);
 }
@@ -118,8 +118,8 @@ img {
 
 @media (prefers-color-scheme: dark) {
  :root {
-  --black: #fff;
-  --white: #000;
+  --black: #f2f4f9;
+  --white: #1d2126;
  }
 }
 
@@ -198,8 +198,8 @@ h5,
 h6,
 ol,
 ul {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 0;
+    padding: 1rem;
 }
 html {
     box-sizing: border-box;
@@ -551,8 +551,7 @@ pre {
     h6,
     ol,
     ul {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        padding: 1rem;
     }
     section {
         margin-top: 45px;
@@ -632,4 +631,21 @@ pre {
     pre {
         --font-size: 0.9375rem;
     }
+}
+
+h2, h3, .installer{
+    margin: 0 !important;
+    text-align: center;
+    position: sticky;
+    top: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(1em);
+}
+
+.installer{
+    top: 4rem;
+}
+
+h3{
+    top: 2rem;
 }
