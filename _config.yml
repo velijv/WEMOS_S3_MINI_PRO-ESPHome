@@ -32,30 +32,30 @@ remote_theme: riggraz/no-style-please
 plugins:
 - jekyll-remote-theme
 - jekyll-default-layout
-#- jekyll-gist
+- jekyll-gist
 - jekyll-seo-tag
 - jekyll-github-metadata
 - jekyll-optional-front-matter
 #- jekyll-paginate
-- jekyll-readme-index
+#- jekyll-readme-index
 - jekyll-titles-from-headings
 - jekyll-relative-links
 #google_analytics: G-5H8W7JPJW7
-#markdown: kramdown
 
+markdown: kramdown
 #lsi: false
 safe: true
-source: https://github.com/velijv/WEMOS_S3_MINI_PRO-ESPHome
-incremental: false
+#source: https://github.com/velijv/WEMOS_S3_MINI_PRO-ESPHome
+#incremental: false
 highlighter: rouge
-gist:
-  noscript: false
+#gist:
+#  noscript: false
 kramdown:
-  math_engine: mathjax
+#  math_engine: mathjax
   syntax_highlighter: rouge
-  remove_block_html_tags: false
-  syntax_highlighter_opts:
-    disable : false
+#  remove_block_html_tags: false
+#  syntax_highlighter_opts:
+#    disable : false
 
 social:
   name: Veli-Johan Veromann

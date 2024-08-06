@@ -152,6 +152,17 @@ table, tbody, tr{
     width: 100%;
 }
 
+table.grid, table.grid tbody{
+    display: block;
+}
+
+table.grid tr{
+    display: grid !important;
+    width: 100vw !important;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(100% /(5 + 1) + 0.1%, 10em, 100%), 1fr));
+    grid-template-rows: fit-content(50%);
+}
+
 .markdown-body table td, .markdown-body table th, table td, table th{
   border:0;
 }
