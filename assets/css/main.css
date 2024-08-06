@@ -109,17 +109,21 @@ img {
 
 :root {
   color-scheme: light dark;
-  --white: #fff;
-  --black: #000;
+  --white: #f2f4f9;
+  --black: #1d2126;
   --transparent: rgba(128,128,128,0.2);
   --color: rgb(138,43,226);
+  --color: #18BCF2;
+  --font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: ui-monospace, SF Mono, Menlo, Consolas, Monaco, Inconsolata, Fira Mono, Droid Sans Mono, Liberation Mono, Lucida Console, monospace;
+
 }
 
 
 @media (prefers-color-scheme: dark) {
  :root {
-  --black: #fff;
-  --white: #000;
+  --black: #f2f4f9;
+  --white: #1d2126;
  }
 }
 
@@ -143,7 +147,24 @@ table, iframe{
   width:100%;
   display: block;
   border:0;
+  border-collapse: collapse;
+  margin: 1rem;
 }
+
+table, tbody, tr{
+    width: 100%;
+}
+
+table.grid, table.grid tbody{
+    display: block;
+}
+
+table.grid tr{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(100% /(5 + 1) + 0.1%, 10em, 100%), 1fr));
+    grid-template-rows: fit-content(50%);
+}
+
 .markdown-body table td, .markdown-body table th, table td, table th{
   border:0;
 }
@@ -198,8 +219,8 @@ h5,
 h6,
 ol,
 ul {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 0;
+    padding: 1rem;
 }
 html {
     box-sizing: border-box;
@@ -218,9 +239,7 @@ html {
 }
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
+    font-family: var(--font-family);
 }
 hr {
   display: block;
@@ -242,8 +261,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier,
-        monospace;
+    font-family: var(--font-family-monospace);
     font-size: 1em;
 }
 small {
@@ -325,6 +343,9 @@ pre {
 }
 summary {
     display: list-item;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
 }
 body,
 html {
@@ -352,7 +373,7 @@ header > section {
     margin-bottom: 0;
 }
 header {
-    background-color: var(--black);
+    background-color: var(--color);
 }
 /*
 header,
@@ -551,8 +572,7 @@ pre {
     h6,
     ol,
     ul {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        padding: 1rem;
     }
     section {
         margin-top: 45px;
@@ -632,4 +652,18 @@ pre {
     pre {
         --font-size: 0.9375rem;
     }
+}
+
+h2, h3, .installer{
+    margin: 0 !important;
+    text-align: center;
+    position: sticky;
+    top: 0rem;
+    padding: 1rem;
+    backdrop-filter: blur(1em);
+}
+
+.installer{
+    top: 3.5rem;
+    z-index: 4;
 }
